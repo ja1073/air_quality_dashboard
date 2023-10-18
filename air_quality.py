@@ -7,10 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1CGzvmieDVU0fJ-nFAdxxsmoQh_EfqYPI
 """
 
-!pip install streamlit
-!pip install sqlite-utils
-!pip install streamlit_autorefresh
-
 import pandas as pd
 import streamlit as st
 import numpy as np
