@@ -36,10 +36,10 @@ jobs:
 
  
 
-      - name: execute py script # run main.py
+      - name: execute py script # run air_quality.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python main.py
+        run: python air_quality.py
 
       - name: commit files and push
         run: |
