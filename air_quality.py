@@ -75,6 +75,7 @@ def get_image(path:str)->Image:
     return image
 
 image = get_image("LBTH_banner.PNG") # path of the file
+st.image(image)
 
 st.subheader('Nitrogen dioxide (NO2)')
 st.write('''Nitrogen dioxide (NO2) is a gas that is mainly produced during the combustion of fossil fuels, along with nitric oxide (NO).
