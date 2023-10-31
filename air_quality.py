@@ -61,13 +61,6 @@ df.head()
 
 st.set_page_config(layout = "wide")
 
-def get_image(path:str)->Image:
-    image = Image.open(path)
-    return image
-
-image = get_image("LBTH_banner.PNG") # path of the file
-st.image(image)
-
 st.title("Air quality dashboard")
 st.write('''This is a dashboard displaying air quality data in Tower Hamlets.
  This information has been obtained from the Environmental Research Group of Kings College
@@ -113,3 +106,10 @@ fig.add_hline(y=40,line_dash='dot')
 fig.show()
 
 st.plotly_chart(fig, theme=None)
+
+def get_image(path:str)->Image:
+    image = Image.open(path)
+    return image
+
+image = get_image("LBTH_banner.PNG") # path of the file
+st.image(image)
