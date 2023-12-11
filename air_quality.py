@@ -109,28 +109,23 @@ pollutant= st.sidebar.selectbox('Choose a pollutant', options= ('NO2', 'Ozone'))
 
 #Make NO2 page
 
-if pollutant =='NO2':
-     st.subheader('Nitrogen dioxide (NO2)')
-     st.write('''Nitrogen dioxide (NO2) is a gas that is mainly produced during the combustion of fossil fuels, along with nitric oxide (NO).
-     Short-term exposure to concentrations of NO2 can cause inflammation of the airways and increase susceptibility to respiratory infections and to allergens. 
-     NO2 can also exacerbate the symptoms of those already suffering from lung or heart conditions, and cause changes to the environment such as soil chemistry.''')
-     
-     st.write('''The Air Quality Standards Regulations 2010 require that the annual mean concentration of NO2 must not exceed 40 µg/m3 and that there should be no more than 18
-     exceedances of the hourly mean limit value (concentrations above 200 µg/m3) in a single year.''')
-
+if pollutant == 'NO2':
+    st.subheader('Nitrogen dioxide (NO2)')
+    st.write('''Nitrogen dioxide (NO2) is a gas that is mainly produced during the combustion of fossil fuels, along with nitric oxide (NO).
+    Short-term exposure to concentrations of NO2 can cause inflammation of the airways and increase susceptibility to respiratory infections and to allergens. 
+    NO2 can also exacerbate the symptoms of those already suffering from lung or heart conditions, and cause changes to the environment such as soil chemistry.''')
     
+    st.write('''The Air Quality Standards Regulations 2010 require that the annual mean concentration of NO2 must not exceed 40 µg/m3 and that there should be no more than 18
+    exceedances of the hourly mean limit value (concentrations above 200 µg/m3) in a single year.''')
+
     fig.update_layout(
         title={
-            'text': 'Line plot showing hourly NO2 measurements from active sensors in Tower Hamlets',
-            'xanchor': 'left',
-            'yanchor': 'top',
-            'x': 0.05,
-            'y': 0.98
-        },
+            'text': 'Line plot showing hourly NO2 measurements from active sensors in Tower Hamlets','xanchor': 'left',
+            'yanchor': 'top','x':0.05,'y':0.98},
         xaxis_title='Measurement Date',
         yaxis_title='NO<sub>2</sub> Concentration (µg/m<sup>3</sup>)',
-        legend_title_text='',
-        font=dict(size=17)
+        legend_title_text= '', 
+        font=dict(size= 17)
     )
     
     fig.update_xaxes(title_font=dict(size=22), tickfont=dict(size=18))
@@ -153,17 +148,13 @@ if pollutant =='NO2':
 
 #make ozone page
 
-if pollutant =='Ozone':
-     st.subheader('Ozone (O3)')
-     st.write('''Ozone (O3) is a gas which is damaging to human health and can trigger inflammation of the 
-     respiratory tract, eyes, nose and throat as well as asthma attacks. In addition, 
-     ozone can have adverse effects on the environment through oxidative damage to vegetation including crops. 
-     ''')
-     
-     st.write('''The Air Quality Standards Regulations 2010 set the target that the 8-hour mean 
-     concentrations of O3 should not exceed 100 µg/m3 more than 10 times per year.
-     ''')
+if pollutant == 'Ozone':
+    st.subheader('Ozone (O3)')
+    st.write('''Ozone (O3) is a gas which is damaging to human health and can trigger inflammation of the respiratory tract, eyes, nose and throat as well as asthma attacks. 
+    In addition, ozone can have adverse effects on the environment through oxidative damage to vegetation including crops.''')
     
+    st.write('''The Air Quality Standards Regulations 2010 set the target that the 8-hour mean concentrations of O3 should not exceed 100 µg/m3 more than 10 times per year.''')
+
     fig.update_layout(
         title={
             'text': 'Line plot showing hourly O3 measurements from active sensors in Tower Hamlets',
