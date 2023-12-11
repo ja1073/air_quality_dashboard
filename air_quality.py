@@ -99,7 +99,7 @@ def get_image(path:str)->Image:
     image = Image.open(path)
     return image
 
-image = get_image("logo.PNG") # path of the file
+image = get_image("LOGO.PNG") # path of the file
 st.sidebar.image(image, use_column_width=True)
 st.sidebar.header(":black[Filter your data]")
 
