@@ -118,33 +118,34 @@ if pollutant =='NO2':
      st.write('''The Air Quality Standards Regulations 2010 require that the annual mean concentration of NO2 must not exceed 40 µg/m3 and that there should be no more than 18
      exceedances of the hourly mean limit value (concentrations above 200 µg/m3) in a single year.''')
 
-            fig.update_layout(title={
-            'text': 'Line plot showing hourly NO2 measurements from active sensors in Tower Hamlets','xanchor': 'left',
-            'yanchor': 'top','x':0.05,'y':0.98},
-                            xaxis_title='Measurement Date',
-                            yaxis_title='NO<sub>2</sub> Concentration (µg/m<sup>3</sup>)',
-                            #legend=dict(orientation="h", entrywidth=250,
-                            #yanchor="bottom", y=1.02, xanchor="right", x=1),
-                            legend_title_text= '', font=dict(size= 17)
-                            )
-
-            fig.update_xaxes(title_font=dict(size=22), tickfont=dict(size=18))
-            fig.update_yaxes(title_font=dict(size=22), tickfont=dict(size=18))
-
-            #print("plotly express hovertemplate:", fig.data[0].hovertemplate)
-
-            fig.update_traces(hovertemplate='<b>Measurement time (GMT) = </b>%{x}<br><b>Value = </b>%{y}<extra></extra>')
-
-            fig.update_layout(hoverlabel = dict(
-                font_size = 16))
-
-            fig.add_hline(y=40,line_dash='dot')
-
-            #fig.add_annotation(x=20,y=40, text='Maximum target concentration', showarrow=False,yshift=10)
-
-            fig.show()
-
-            st.plotly_chart(fig, theme=None)
+    
+    fig.update_layout(title={
+                'text': 'Line plot showing hourly NO2 measurements from active sensors in Tower Hamlets','xanchor': 'left',
+                'yanchor': 'top','x':0.05,'y':0.98},
+                                xaxis_title='Measurement Date',
+                                yaxis_title='NO<sub>2</sub> Concentration (µg/m<sup>3</sup>)',
+                                #legend=dict(orientation="h", entrywidth=250,
+                                #yanchor="bottom", y=1.02, xanchor="right", x=1),
+                                legend_title_text= '', font=dict(size= 17)
+                                )
+    
+    fig.update_xaxes(title_font=dict(size=22), tickfont=dict(size=18))
+    fig.update_yaxes(title_font=dict(size=22), tickfont=dict(size=18))
+    
+    #print("plotly express hovertemplate:", fig.data[0].hovertemplate)
+    
+    fig.update_traces(hovertemplate='<b>Measurement time (GMT) = </b>%{x}<br><b>Value = </b>%{y}<extra></extra>')
+    
+    fig.update_layout(hoverlabel = dict(
+                    font_size = 16))
+    
+    fig.add_hline(y=40,line_dash='dot')
+    
+    #fig.add_annotation(x=20,y=40, text='Maximum target concentration', showarrow=False,yshift=10)
+    
+    fig.show()
+    
+    st.plotly_chart(fig, theme=None)
 
 #make ozone page
 
@@ -159,7 +160,7 @@ if pollutant =='Ozone':
      concentrations of O3 should not exceed 100 µg/m3 more than 10 times per year.
      ''')
     
-            fig.update_layout(title={
+    fig.update_layout(title={
             'text': 'Line plot showing hourly O3 measurements from active sensors in Tower Hamlets','xanchor': 'left',
             'yanchor': 'top','x':0.05,'y':0.98},
                             xaxis_title='Measurement Date',
@@ -169,25 +170,25 @@ if pollutant =='Ozone':
                             legend_title_text= '', font=dict(size= 17)
                             )
 
-            fig.update_xaxes(title_font=dict(size=22), tickfont=dict(size=18))
-            fig.update_yaxes(title_font=dict(size=22), tickfont=dict(size=18))
+    fig.update_xaxes(title_font=dict(size=22), tickfont=dict(size=18))
+    fig.update_yaxes(title_font=dict(size=22), tickfont=dict(size=18))
 
-            #print("plotly express hovertemplate:", fig.data[0].hovertemplate)
+    #print("plotly express hovertemplate:", fig.data[0].hovertemplate)
 
-            fig.update_traces(hovertemplate='<b>Measurement time (GMT) = </b>%{x}<br><b>Value = </b>%{y}<extra></extra>')
+    fig.update_traces(hovertemplate='<b>Measurement time (GMT) = </b>%{x}<br><b>Value = </b>%{y}<extra></extra>')
 
-            fig.update_layout(hoverlabel = dict(
+    fig.update_layout(hoverlabel = dict(
                 font_size = 16))
 
-            #fig.add_hline(y=40,line_dash='dot')
+    #fig.add_hline(y=40,line_dash='dot')
 
-            #fig.add_annotation(x=20,y=40, text='Maximum target concentration', showarrow=False,yshift=10)
+    #fig.add_annotation(x=20,y=40, text='Maximum target concentration', showarrow=False,yshift=10)
 
-            fig.show()
+    fig.show()
 
-            st.plotly_chart(fig, theme=None)    
+    st.plotly_chart(fig, theme=None)    
 
-            st.write(''' There are currently no active O3 sensors in Tower Hamlets with the most recent measurement of O3 being on 24/2 
+    st.write(''' There are currently no active O3 sensors in Tower Hamlets with the most recent measurement of O3 being on 24/2 
                             at Blackwall
         ''')
 
