@@ -119,7 +119,8 @@ if pollutant =='NO2':
      exceedances of the hourly mean limit value (concentrations above 200 µg/m3) in a single year.''')
 
     
-    fig.update_layout(title={
+    fig.update_layout(
+        title={
                 'text': 'Line plot showing hourly NO2 measurements from active sensors in Tower Hamlets','xanchor': 'left',
                 'yanchor': 'top','x':0.05,'y':0.98},
                                 xaxis_title='Measurement Date',
@@ -160,7 +161,8 @@ if pollutant =='Ozone':
      concentrations of O3 should not exceed 100 µg/m3 more than 10 times per year.
      ''')
     
-    fig.update_layout(title={
+    fig.update_layout(
+        title={
             'text': 'Line plot showing hourly O3 measurements from active sensors in Tower Hamlets','xanchor': 'left',
             'yanchor': 'top','x':0.05,'y':0.98},
                             xaxis_title='Measurement Date',
